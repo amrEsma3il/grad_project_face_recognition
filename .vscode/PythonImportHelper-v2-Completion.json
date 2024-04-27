@@ -384,7 +384,7 @@
         "kind": 5,
         "importPath": "cnn_rec",
         "description": "cnn_rec",
-        "peekOfCode": "app = Flask(__name__)\n@app.route('/predict', methods=[\"POST\"])\ndef predict():\n    if 'file' not in request.files:\n        return {\"error\": \"No file part in the request.\"}, 400\n    file = request.files['file']\n    if file.filename == '':\n        return {\"error\": \"No file selected.\"}, 400\n    return recognize_faces(file)\nif __name__ == \"__main__\":",
+        "peekOfCode": "app = Flask(__name__)\n@app.route('/predict', methods=[\"POST\",\"GET\"])\ndef predict():\n    if 'file' not in request.files:\n        return {\"error\": \"No file part in the request.\"}, 400\n    file = request.files['file']\n    if file.filename == '':\n        return {\"error\": \"No file selected.\"}, 400\n    return recognize_faces(file)\nif __name__ == \"__main__\":",
         "detail": "cnn_rec",
         "documentation": {}
     },

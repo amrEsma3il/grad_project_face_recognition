@@ -58,7 +58,7 @@ def recognize_faces(image):
 
 app = Flask(__name__)
 
-@app.route('/predict', methods=["POST"])
+@app.route('/predict', methods=["POST","GET"])
 def predict():
     if 'file' not in request.files:
         return {"error": "No file part in the request."}, 400
